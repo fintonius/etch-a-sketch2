@@ -1,5 +1,5 @@
 const grid = document.getElementById('grid');
-let gridHeightAndWidth = 600;
+let gridHeightAndWidth = 960;
 grid.style.height = gridHeightAndWidth + 'px';
 grid.style.width = gridHeightAndWidth + 'px';
 
@@ -14,6 +14,7 @@ for (let j = 0; j <= x; j++) {
 	for (let i = 0; i <= x; i++) {
 		let square = document.createElement('div');
 		square.classList.add('square');
+		square.addEventListener('mouseover', () => square.style.backgroundColor = "lightBlue");
 		horizontalLine.appendChild(square);
 		};
 	grid.appendChild(horizontalLine);
