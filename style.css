@@ -3,6 +3,11 @@
 	box-sizing: border-box;
 }
 
+#page {
+	display: flex;
+	justify-content: center;
+	
+}
 #grid {
 	display: flex;
 	flex-direction: column;
@@ -18,5 +23,4 @@
 .square{
 	display: flex;
 	flex: 1;
-	border: 1px dotted lightcoral;
 }

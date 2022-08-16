@@ -27,3 +27,14 @@ Project outline/psuedo code
 
 	++ Step 3:
 	 - add a mouseOver event to div 'square' to change backgroundColor
+
+	++ Step 4: 
+	 - add an element that allows the user to specify the number of squares in
+	 the grid 
+	 - once selected the grid should reload with that amount of squares
+	 - add colour options for the squares
+	  -- rainbow
+	  -- black
+		-- reduced opacity that can be increased by additional mouseOvers
+		-- click & drag option
+		-- eraser
