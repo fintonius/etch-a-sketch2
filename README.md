@@ -17,7 +17,7 @@ Project outline/psuedo code
 	- create a div and append to div container
 	- repeat process x number of times - 16 in first instance
 	- when creating each new div place it beside previous div
-		-- use flexbox to layout the divs to fit in at max 		 	container width
+		-- use flexbox to layout the divs to fit in at max container width
 
 	++ Step 2:
 	- create a new div 
