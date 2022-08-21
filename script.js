@@ -1,10 +1,25 @@
-//slider for grid size, 1 - 100 - this will require a lot more work than I anticipated so use a branch?!
 //clean up the layout in CSS
 
-let gridSize = document.getElementById('input').value;
-let sizeBlurb = document.getElementById('size-blurb');
+let gridSize = document.getElementById('slider').value;
+
 let gridHeightAndWidth = 500;
 let squareColor = 'black';
+
+let number1 = document.getElementById('a');
+let number2 = document.getElementById('b');
+let slideInput = document.getElementById('slider');
+
+//gives live update for current grid dimentsions
+slideInput.addEventListener('input', () => {
+	number1.textContent = slideInput.value;
+	number2.textContent = slideInput.value;
+});
+
+slideInput.onchange = () => {
+	gridSize = document.getElementById('slider').value;
+			clearGrid();
+			createGrid();
+	};
 
 function createGrid () {
 
@@ -16,12 +31,12 @@ function createGrid () {
 	grid.style.width = gridHeightAndWidth + 'px';
 	
 	// create vertical row of divs
-	for (let j = 0; j <= gridSize; j++) {
+	for (let j = 0; j < gridSize; j++) {
 		let horizontalLine = document.createElement('div');
 		horizontalLine.classList.add('line');
 	
 		// create horizontal row of divs inside vertical divs
-	for (let i = 0; i <= gridSize; i++) {
+	for (let i = 0; i < gridSize; i++) {
 		let square = document.createElement('div');
 		square.classList.add('square');
 		horizontalLine.appendChild(square);
@@ -31,9 +46,6 @@ function createGrid () {
 	};
 	
 	gridContainer.appendChild(grid);
-
-	sizeBlurb.textContent = `The current grid dimensions are ${gridSize} squares x ${gridSize} squares.`
-
 	gridSquareColor();
 };
 
@@ -71,7 +83,8 @@ let rainbowBtn = document.getElementById('rainbow');
 		eraserBtn = false,
 		shaderBtn = false
 	});
-
+	
+//determines the color for each grid square
 function gridSquareColor() {
 	let square = document.querySelectorAll('.square');
 		square.forEach(e => {
@@ -109,12 +122,3 @@ function clearGrid () {
 	let gridRemove = document.getElementById('grid');
 	gridRemove.remove();
 };
-
-function submitSize () {
-	gridSize = document.getElementById('input').value;
-	if (gridSize > 100) {
-		alert('too much')} else { 
-			clearGrid();
-			createGrid();
-		};
-	};

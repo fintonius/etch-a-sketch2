@@ -17,12 +17,10 @@
 		<div id="page">
 			<h1> Etch-A-Sketch</h1>
 			<div id="grid-dimensions">
-				<p id="size-blurb"></p>
-				<p>Please input a grid size; max. 100 
-					<input id="input" value="50">
-					<input type="button" onclick="submitSize()" value="Submit">
-					<input type="range" min="1" max="100" value="10" class="slider" id="slider">
+				<p id="size-blurb">	The current grid dimensions are <output id="a">50</output> squares x <output id="b">50</output> squares.
 				</p>
+				<p>Use the slider to select a grid size, from 1 to 100!</p>
+				<p><input type="range" min="1" max="100" value="50" class="slider" id="slider"></p>
 				<div id="buttons">
 					<button class="button" id="rainbow">RAINBOW</button>
 					<button class="button" id="eraser">ERASER</button>
