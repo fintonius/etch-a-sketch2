@@ -38,3 +38,6 @@ Project outline/psuedo code
 		-- reduced opacity that can be increased by additional mouseOvers
 		-- click & drag option
 		-- eraser
+
+	++ Step 5:
+	  - add a colour picker
