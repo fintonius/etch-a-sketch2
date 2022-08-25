@@ -1,25 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 
-	<head>
-		
+	<head>		
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" initial-scale=1.0">
 		<link rel="stylesheet" href="style.css">
 		<script defer src="script.js"></script>
 		<title>Etch-A-Sketch</title>
-
 	</head>
 
-	<body onload="createGrid()">
-		
+	<body class="body" onload="createGrid()">		
 		<div id="page">
 			<h1> Etch-A-Sketch</h1>
 			<div id="grid-dimensions">
-				<p id="size-blurb">	The current grid dimensions are <output id="a">50</output> squares x <output id="b">50</output> squares.
-				</p>
 				<p>Use the slider to select a grid size, from 1 to 100!</p>
+				<p>	The current grid dimensions are: <span><span id="a"> 50 </span> squares
+					 x <span id="b"> 50 </span> squares.</span></p>
 				<p><input type="range" min="1" max="100" value="50" class="slider" id="slider"></p>
 				<div id="buttons">
 					<button class="button" id="rainbow">RAINBOW</button>
@@ -27,11 +24,13 @@
 					<button class="button" id="shader">SHADER</button>
 					<button class="button" id="random">RANDOM</button>
 				</div>
-				<div id="grid-container">
+			<div class="grid-frame">
+				<div id="grid-container" class="grid-container"></div>
 			</div>
+			<div class="grid-bottom"></div>
+			<div class="grid-shadow"></div>
 			</div>
 		</div>
-
 	</body>
 
 </html>

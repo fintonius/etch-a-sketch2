@@ -11,8 +11,8 @@ let slideInput = document.getElementById('slider');
 
 //gives live update for current grid dimentsions
 slideInput.addEventListener('input', () => {
-	number1.textContent = slideInput.value;
-	number2.textContent = slideInput.value;
+	number1.textContent = ` ${slideInput.value} `;
+	number2.textContent = ` ${slideInput.value} `;
 });
 
 slideInput.onchange = () => {
@@ -27,8 +27,8 @@ function createGrid () {
 
 	const grid = document.createElement('div');
 	grid.setAttribute('id', 'grid');
-	grid.style.height = gridHeightAndWidth + 'px';
-	grid.style.width = gridHeightAndWidth + 'px';
+	// grid.style.height = gridHeightAndWidth + 'px';
+	// grid.style.width = gridHeightAndWidth + 'px';
 	
 	// create vertical row of divs
 	for (let j = 0; j < gridSize; j++) {

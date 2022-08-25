@@ -40,4 +40,5 @@ Project outline/psuedo code
 		-- eraser
 
 	++ Step 5:
-	  - add a colour picker
+	  - use CSS to add some styling to the page
+		- try to add 3D aspect to the elements just using CSS
