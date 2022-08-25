@@ -42,3 +42,11 @@ Project outline/psuedo code
 	++ Step 5:
 	  - use CSS to add some styling to the page
 		- try to add 3D aspect to the elements just using CSS
+
+	++ Step 6:
+	  - add colour picker to the button options
+		  - I don't want to use the standard web colour picker, I want a grid of colours the user can select from
+			- when CP button clicked grid will appear as a separated window below the buttons
+			- when user has selected their colour window disappears
+			- is the grid created when clicked like the grid is or has it been created already and called by the click?
+			- use a function to generate the colours

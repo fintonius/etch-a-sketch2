@@ -27,9 +27,7 @@ function createGrid () {
 
 	const grid = document.createElement('div');
 	grid.setAttribute('id', 'grid');
-	// grid.style.height = gridHeightAndWidth + 'px';
-	// grid.style.width = gridHeightAndWidth + 'px';
-	
+		
 	// create vertical row of divs
 	for (let j = 0; j < gridSize; j++) {
 		let horizontalLine = document.createElement('div');
@@ -122,3 +120,37 @@ function clearGrid () {
 	let gridRemove = document.getElementById('grid');
 	gridRemove.remove();
 };
+
+let colorPickerColor = '';
+function createColorGrid() {
+	const colorGrid = document.getElementById('color-grid');
+
+	for (let j = 0; j < 6; j++) {
+		let colorLine = document.createElement('div');
+		colorLine.classList.add('color-line');
+
+		for (let i = 0; i < 6; i++) {
+			let colorSquare = document.createElement('div');
+			colorSquare.classList.add('color-square');
+			colorLine.appendChild(colorSquare)
+			colorGrid.appendChild(colorLine)
+		}	
+	}
+
+	let coloredSquare = document.querySelectorAll('.color-square');
+	let a = 360;
+	for (let i = 0; i < a; i++) {
+		
+	coloredSquare.forEach(e => {
+		e.style.backgroundColor = `hsl(${[i]}, 60%, 70%)`;
+		e.addEventListener('click', () => {
+			colorPickerColor = e.style.backgroundColor;
+			console.log(colorPickerColor);
+		});
+		i+=10;
+		
+	})
+}
+}
+
+createColorGrid();

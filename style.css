@@ -28,9 +28,16 @@ h1 {
 	margin: 10px;
 }
 
+#grid-dimensions {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
 .grid-frame {
 	display: flex;
-	place-items: center;
+	flex-direction: column;
+	align-items: center;
 	box-sizing: content-box;
 	width: 510px;
 	height: 510px;
@@ -41,13 +48,16 @@ h1 {
 	border-bottom: 4px solid red;
 }
 .grid-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	box-sizing: content-box;
 	width: 505px;
 	height: 505px;
 	border: 3px rgb(241, 164, 164) solid;
 	border-right: 2px rgb(241, 164, 164) solid;
-	display: grid;
-	place-items: center;
+	/* display: grid;
+	place-items: center; */
 }
 
 #grid{
@@ -69,11 +79,41 @@ h1 {
 .grid-shadow{
 	width: 506px;
 	height: 0px;
-	margin-left: 5px;
+	margin-left: 3px;
 	border-top: 75px solid rgb(218, 209, 233);
 	border-left: 15px solid transparent;
 	border-right: 5px solid transparent;
 	}
+
+	.color-grid {
+		display: flex;
+		flex-direction: row;		
+		height: 100px;
+		width: 200px;
+	}
+
+	.color-line {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		flex: 1;
+		width: 100%;
+		height: 100%;
+	}
+
+	.color-square {
+		flex: auto;
+		width: 100%;
+		opacity: .7;
+		transition: opacity .3s;
+		cursor: pointer;
+	}
+
+	.color-square:hover {
+		opacity: 1;
+	}
+
+
 
 .slider {
 	appearance: none;
@@ -86,7 +126,7 @@ h1 {
 }
 
 .slider:hover {
-	opacity: 1;
+	opacity: 1;	
 }
 
 .slider::-webkit-slider-thumb {
