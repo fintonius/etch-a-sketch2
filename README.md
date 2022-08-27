@@ -50,3 +50,7 @@ Project outline/psuedo code
 			- when user has selected their colour window disappears
 			- is the grid created when clicked like the grid is or has it been created already and called by the click?
 			- use a function to generate the colours
+
+	++ Step 7: 
+	  - add CSS to the buttons, make it look like they are slightly raised and "press-in" when clicked :)
+		- add animation to the color picker grid when selected so it "opens up" 
