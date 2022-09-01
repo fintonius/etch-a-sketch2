@@ -167,4 +167,3 @@ function displayColorGrid() {
 		colorGrid.style.display = 'none';
 	}
 };
-
